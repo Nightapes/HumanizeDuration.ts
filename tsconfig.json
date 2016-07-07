@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es5",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "declaration": true,
+        "moduleResolution": "node"
+    },
+    "files": [
+        "typings/main.d.ts",
+        "humanize-duration-ts.ts",
+        "./src/humanize-duration.interface.ts",
+        "./src/humanize-duration.lang.ts",
+        "./src/humanize-duration.ts",
+        "./tests/humanize-duration.spec.ts"
+    ]
+}
