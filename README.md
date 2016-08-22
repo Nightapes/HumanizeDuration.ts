@@ -1,5 +1,4 @@
-# HumanizeDuration.ts
-
+# HumanizeDuration.ts [![Build Status](https://travis-ci.org/Nightapes/HumanizeDuration.ts.svg?branch=master)](https://travis-ci.org/Nightapes/HumanizeDuration.ts)
 361000 becomes "6 minutes, 1 second"
 
 I have the time in milliseconds and I want it to become "30 minutes" or "3 days, 1 hour". Enter Humanize Duration!

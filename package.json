@@ -52,7 +52,9 @@
     "typings": "0.6.8",
     "zone.js": "0.6.12"
   },
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }
