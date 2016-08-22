@@ -164,14 +164,14 @@ export function main() {
                     language: 'shortEn',
                     languages: {
                         shortEn: {
-                            y: function () { return 'y'; },
-                            mo: function () { return 'mo'; },
-                            w: function () { return 'w'; },
-                            d: function () { return 'd'; },
-                            h: function () { return 'h'; },
-                            m: function () { return 'm'; },
-                            s: function () { return 's'; },
-                            ms: function () { return 'ms'; },
+                            y: (c: any) => { return 'y'; },
+                            mo: (c: any) => { return 'mo'; },
+                            w: (c: any) => { return 'w'; },
+                            d: (c: any) => { return 'd'; },
+                            h: (c: any) => { return 'h'; },
+                            m: (c: any) => { return 'm'; },
+                            s: (c: any) => { return 's'; },
+                            ms: (c: any) => { return 'ms'; },
                         }
                     }
                 });

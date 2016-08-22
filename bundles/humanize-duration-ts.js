@@ -6,6 +6,7 @@ System.registerDynamic("src/humanize-duration.lang", [], true, function($__requi
       GLOBAL = this;
   var HumanizeDurationLanguage = (function() {
     function HumanizeDurationLanguage() {
+      var _this = this;
       this.languages = {
         ar: {
           y: function(c) {
@@ -63,28 +64,28 @@ System.registerDynamic("src/humanize-duration.lang", [], true, function($__requi
         },
         cs: {
           y: function(c) {
-            return ['rok', 'roku', 'roky', 'let'][this.getCzechForm(c)];
+            return ['rok', 'roku', 'roky', 'let'][_this.getCzechForm(c)];
           },
           mo: function(c) {
-            return ['měsíc', 'měsíce', 'měsíce', 'měsíců'][this.getCzechForm(c)];
+            return ['měsíc', 'měsíce', 'měsíce', 'měsíců'][_this.getCzechForm(c)];
           },
           w: function(c) {
-            return ['týden', 'týdne', 'týdny', 'týdnů'][this.getCzechForm(c)];
+            return ['týden', 'týdne', 'týdny', 'týdnů'][_this.getCzechForm(c)];
           },
           d: function(c) {
-            return ['den', 'dne', 'dny', 'dní'][this.getCzechForm(c)];
+            return ['den', 'dne', 'dny', 'dní'][_this.getCzechForm(c)];
           },
           h: function(c) {
-            return ['hodina', 'hodiny', 'hodiny', 'hodin'][this.getCzechForm(c)];
+            return ['hodina', 'hodiny', 'hodiny', 'hodin'][_this.getCzechForm(c)];
           },
           m: function(c) {
-            return ['minuta', 'minuty', 'minuty', 'minut'][this.getCzechForm(c)];
+            return ['minuta', 'minuty', 'minuty', 'minut'][_this.getCzechForm(c)];
           },
           s: function(c) {
-            return ['sekunda', 'sekundy', 'sekundy', 'sekund'][this.getCzechForm(c)];
+            return ['sekunda', 'sekundy', 'sekundy', 'sekund'][_this.getCzechForm(c)];
           },
           ms: function(c) {
-            return ['milisekunda', 'milisekundy', 'milisekundy', 'milisekund'][this.getCzechForm(c)];
+            return ['milisekunda', 'milisekundy', 'milisekundy', 'milisekund'][_this.getCzechForm(c)];
           },
           decimal: ','
         },
@@ -349,25 +350,25 @@ System.registerDynamic("src/humanize-duration.lang", [], true, function($__requi
             return ((c % 10 === 0) || (c % 100 >= 10 && c % 100 <= 20)) ? 'metų' : 'metai';
           },
           mo: function(c) {
-            return ['mėnuo', 'mėnesiai', 'mėnesių'][this.getLithuanianForm(c)];
+            return ['mėnuo', 'mėnesiai', 'mėnesių'][_this.getLithuanianForm(c)];
           },
           w: function(c) {
-            return ['savaitė', 'savaitės', 'savaičių'][this.getLithuanianForm(c)];
+            return ['savaitė', 'savaitės', 'savaičių'][_this.getLithuanianForm(c)];
           },
           d: function(c) {
-            return ['diena', 'dienos', 'dienų'][this.getLithuanianForm(c)];
+            return ['diena', 'dienos', 'dienų'][_this.getLithuanianForm(c)];
           },
           h: function(c) {
-            return ['valanda', 'valandos', 'valandų'][this.getLithuanianForm(c)];
+            return ['valanda', 'valandos', 'valandų'][_this.getLithuanianForm(c)];
           },
           m: function(c) {
-            return ['minutė', 'minutės', 'minučių'][this.getLithuanianForm(c)];
+            return ['minutė', 'minutės', 'minučių'][_this.getLithuanianForm(c)];
           },
           s: function(c) {
-            return ['sekundė', 'sekundės', 'sekundžių'][this.getLithuanianForm(c)];
+            return ['sekundė', 'sekundės', 'sekundžių'][_this.getLithuanianForm(c)];
           },
           ms: function(c) {
-            return ['milisekundė', 'milisekundės', 'milisekundžių'][this.getLithuanianForm(c)];
+            return ['milisekundė', 'milisekundės', 'milisekundžių'][_this.getLithuanianForm(c)];
           },
           decimal: ','
         },
@@ -432,28 +433,28 @@ System.registerDynamic("src/humanize-duration.lang", [], true, function($__requi
         },
         pl: {
           y: function(c) {
-            return ['rok', 'roku', 'lata', 'lat'][this.getPolishForm(c)];
+            return ['rok', 'roku', 'lata', 'lat'][_this.getPolishForm(c)];
           },
           mo: function(c) {
-            return ['miesiąc', 'miesiąca', 'miesiące', 'miesięcy'][this.getPolishForm(c)];
+            return ['miesiąc', 'miesiąca', 'miesiące', 'miesięcy'][_this.getPolishForm(c)];
           },
           w: function(c) {
-            return ['tydzień', 'tygodnia', 'tygodnie', 'tygodni'][this.getPolishForm(c)];
+            return ['tydzień', 'tygodnia', 'tygodnie', 'tygodni'][_this.getPolishForm(c)];
           },
           d: function(c) {
-            return ['dzień', 'dnia', 'dni', 'dni'][this.getPolishForm(c)];
+            return ['dzień', 'dnia', 'dni', 'dni'][_this.getPolishForm(c)];
           },
           h: function(c) {
-            return ['godzina', 'godziny', 'godziny', 'godzin'][this.getPolishForm(c)];
+            return ['godzina', 'godziny', 'godziny', 'godzin'][_this.getPolishForm(c)];
           },
           m: function(c) {
-            return ['minuta', 'minuty', 'minuty', 'minut'][this.getPolishForm(c)];
+            return ['minuta', 'minuty', 'minuty', 'minut'][_this.getPolishForm(c)];
           },
           s: function(c) {
-            return ['sekunda', 'sekundy', 'sekundy', 'sekund'][this.getPolishForm(c)];
+            return ['sekunda', 'sekundy', 'sekundy', 'sekund'][_this.getPolishForm(c)];
           },
           ms: function(c) {
-            return ['milisekunda', 'milisekundy', 'milisekundy', 'milisekund'][this.getPolishForm(c)];
+            return ['milisekunda', 'milisekundy', 'milisekundy', 'milisekund'][_this.getPolishForm(c)];
           },
           decimal: ','
         },
@@ -486,55 +487,55 @@ System.registerDynamic("src/humanize-duration.lang", [], true, function($__requi
         },
         ru: {
           y: function(c) {
-            return ['лет', 'год', 'года'][this.getSlavicForm(c)];
+            return ['лет', 'год', 'года'][_this.getSlavicForm(c)];
           },
           mo: function(c) {
-            return ['месяцев', 'месяц', 'месяца'][this.getSlavicForm(c)];
+            return ['месяцев', 'месяц', 'месяца'][_this.getSlavicForm(c)];
           },
           w: function(c) {
-            return ['недель', 'неделя', 'недели'][this.getSlavicForm(c)];
+            return ['недель', 'неделя', 'недели'][_this.getSlavicForm(c)];
           },
           d: function(c) {
-            return ['дней', 'день', 'дня'][this.getSlavicForm(c)];
+            return ['дней', 'день', 'дня'][_this.getSlavicForm(c)];
           },
           h: function(c) {
-            return ['часов', 'час', 'часа'][this.getSlavicForm(c)];
+            return ['часов', 'час', 'часа'][_this.getSlavicForm(c)];
           },
           m: function(c) {
-            return ['минут', 'минута', 'минуты'][this.getSlavicForm(c)];
+            return ['минут', 'минута', 'минуты'][_this.getSlavicForm(c)];
           },
           s: function(c) {
-            return ['секунд', 'секунда', 'секунды'][this.getSlavicForm(c)];
+            return ['секунд', 'секунда', 'секунды'][_this.getSlavicForm(c)];
           },
           ms: function(c) {
-            return ['миллисекунд', 'миллисекунда', 'миллисекунды'][this.getSlavicForm(c)];
+            return ['миллисекунд', 'миллисекунда', 'миллисекунды'][_this.getSlavicForm(c)];
           },
           decimal: ','
         },
         uk: {
           y: function(c) {
-            return ['років', 'рік', 'роки'][this.getSlavicForm(c)];
+            return ['років', 'рік', 'роки'][_this.getSlavicForm(c)];
           },
           mo: function(c) {
-            return ['місяців', 'місяць', 'місяці'][this.getSlavicForm(c)];
+            return ['місяців', 'місяць', 'місяці'][_this.getSlavicForm(c)];
           },
           w: function(c) {
-            return ['неділь', 'неділя', 'неділі'][this.getSlavicForm(c)];
+            return ['неділь', 'неділя', 'неділі'][_this.getSlavicForm(c)];
           },
           d: function(c) {
-            return ['днів', 'день', 'дні'][this.getSlavicForm(c)];
+            return ['днів', 'день', 'дні'][_this.getSlavicForm(c)];
           },
           h: function(c) {
-            return ['годин', 'година', 'години'][this.getSlavicForm(c)];
+            return ['годин', 'година', 'години'][_this.getSlavicForm(c)];
           },
           m: function(c) {
-            return ['хвилин', 'хвилина', 'хвилини'][this.getSlavicForm(c)];
+            return ['хвилин', 'хвилина', 'хвилини'][_this.getSlavicForm(c)];
           },
           s: function(c) {
-            return ['секунд', 'секунда', 'секунди'][this.getSlavicForm(c)];
+            return ['секунд', 'секунда', 'секунди'][_this.getSlavicForm(c)];
           },
           ms: function(c) {
-            return ['мілісекунд', 'мілісекунда', 'мілісекунди'][this.getSlavicForm(c)];
+            return ['мілісекунд', 'мілісекунда', 'мілісекунди'][_this.getSlavicForm(c)];
           },
           decimal: ','
         },
