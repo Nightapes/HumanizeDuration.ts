@@ -148,6 +148,15 @@ export function main() {
             expect(service.humanize(540360012, { largest: 100 })).toBe('6 days, 6 hours, 6 minutes, 0.012 seconds');
         });
 
+        it('should work for czech language',
+            () => {
+                let service = new HumanizeDuration(new HumanizeDurationLanguage());
+                service.setOptions({
+                    language: 'cs'
+                });
+                expect(service.humanize(71177400000)).toBe('2 roky, 3 měsíce, 2 dny');
+            });
+
         it('should work for overwrite language',
             () => {
                 let service = new HumanizeDuration(new HumanizeDurationLanguage());
