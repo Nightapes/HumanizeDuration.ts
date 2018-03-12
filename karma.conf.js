@@ -9,5 +9,6 @@ module.exports = function (config) {
         },
         reporters: ["progress", "karma-typescript"],
         browsers: process.env.TRAVIS ? ['ChromeHeadless'] : ['Chrome'],
+        singleRun: true
     });
 };
