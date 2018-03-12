@@ -12,7 +12,7 @@ export interface IHumanizeDurationOptions {
     unitMeasures: {
         [key: string]: number;
     };
-};
+}
 
 export interface ILanguageItem {
     [key: string]: {
@@ -26,7 +26,7 @@ export interface ILanguageItem {
         ms: any;
         decimal: string
     };
-};
+}
 
 export interface ILanguage {
     y: any;
@@ -38,4 +38,4 @@ export interface ILanguage {
     s: any;
     ms: any;
     decimal: string;
-};
+}

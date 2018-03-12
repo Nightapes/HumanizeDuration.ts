@@ -1,5 +1,5 @@
-import {IHumanizeDurationOptions, ILanguage} from './humanize-duration.interface';
-import {HumanizeDurationLanguage} from './humanize-duration.lang';
+import { IHumanizeDurationOptions, ILanguage } from './humanize-duration.interface';
+import { HumanizeDurationLanguage } from './humanize-duration.lang';
 
 export class HumanizeDuration {
 
@@ -26,14 +26,14 @@ export class HumanizeDuration {
         }
     };
 
-    private options: IHumanizeDurationOptions = undefined;
+    private options: IHumanizeDurationOptions;
 
     constructor(private languageUtil: HumanizeDurationLanguage) {
         this.options = this.defaultOptions;
     }
 
     humanize(value: number, tempOptions?: any) {
-        let options = tempOptions !== undefined ? this.extend(this.defaultOptions, tempOptions) : this.defaultOptions;
+        let options = tempOptions !== undefined ? this.extend(this.options, tempOptions) : this.defaultOptions;
         return this.doHumanization(value, options);
     }
 
@@ -108,7 +108,7 @@ export class HumanizeDuration {
                 piece = pieces[i];
                 piece.unitCount = Math.round(piece.unitCount);
 
-                if (i === 0) { break; };
+                if (i === 0) { break; }
 
                 previousPiece = pieces[i - 1];
 
@@ -128,7 +128,7 @@ export class HumanizeDuration {
                 result.push(this.render(piece.unitCount, piece.unitName, dictionary, options));
             }
 
-            if (result.length === options.largest) { break; };
+            if (result.length === options.largest) { break; }
         }
 
         if (result.length) {

@@ -3,14 +3,14 @@
 
 I have the time in milliseconds and I want it to become "30 minutes" or "3 days, 1 hour". Enter Humanize Duration!
 
-##Origin
+## Origin
 
 
 This is the typescript version of the javascript libary "HumanizeDuration.js"
 The thank goes to: Evan Hahn  ([Github](https://github.com/EvanHahn/HumanizeDuration.js))
 
 
-##Installation
+## Installation
 
 Via npm install (coming soon)
 
@@ -18,7 +18,7 @@ Via npm install (coming soon)
 npm install humanize-duration-ts
 ```
 
-##Basic usage
+## Basic usage
 
 Setup instance:
 
