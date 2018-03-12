@@ -8,6 +8,6 @@ module.exports = function (config) {
             "src/**/*.ts": "karma-typescript" // *.tsx for React Jsx
         },
         reporters: ["progress", "karma-typescript"],
-        browsers: process.env.TRAVIS ? ['Firefox'] : ['Chrome'],
+        browsers: process.env.TRAVIS ? ['ChromeHeadless'] : ['Chrome'],
     });
 };
