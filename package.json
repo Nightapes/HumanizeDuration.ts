@@ -5,8 +5,7 @@
     "scripts": {
         "test": "karma start",
         "build": "tslint --project . && ng-packagr -p package.json",
-        "commit": "tslint --project .  && npm test && git-cz",
-        "semantic-release": "cd ./dist && npm publish && semantic-release"
+        "commit": "tslint --project .  && npm test && git-cz"
     },
     "repository": {
         "type": "git",
@@ -38,7 +37,6 @@
         "karma-jasmine": "0.3.8",
         "karma-typescript": "^3.0.12",
         "ng-packagr": "^2.0.0",
-        "semantic-release": "^15.0.2",
         "tslint": "^5.9.1",
         "tslint-eslint-rules": "^5.1.0",
         "typescript": "2.7.2"
