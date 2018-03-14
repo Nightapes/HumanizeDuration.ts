@@ -23,14 +23,15 @@ npm install humanize-duration-ts
 Setup instance:
 
 ```
-  langService: HumanizeDurationLanguage = new HumanizeDurationLanguage();
-  humanizer: HumanizeDuration = new HumanizeDuration(this.langService);
+  import { HumanizeDurationLanguage, HumanizeDuration } from 'humanize-duration-ts';
 ```
 
 Usage: 
 
 ```
-this.humanizer.humanize(12345678);
+  langService: HumanizeDurationLanguage = new HumanizeDurationLanguage();
+  humanizer: HumanizeDuration = new HumanizeDuration(this.langService);
+  this.humanizer.humanize(12345678);
 ```
 
 
