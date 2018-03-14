@@ -12,10 +12,8 @@ The thank goes to: Evan Hahn  ([Github](https://github.com/EvanHahn/HumanizeDura
 
 ## Installation
 
-Via npm install (coming soon)
-
 ```
-npm install humanize-duration-ts
+npm install humanize-duration-ts --save
 ```
 
 ## Basic usage
