@@ -9,10 +9,7 @@
     "build": "rollup -c",
     "watch": "rollup -cw"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Nightapes/HumanizeDuration.ts.git"
-  },
+  "repository": "https://github.com/Nightapes/HumanizeDuration.ts",
   "keywords": [
     "humanize-duration",
     "typescript"
