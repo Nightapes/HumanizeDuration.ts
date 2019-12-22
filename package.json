@@ -1,6 +1,6 @@
 {
   "name": "humanize-duration-ts",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "description": "An implementation of Humanize Duration in typescript",
   "scripts": {
     "test": "karma start",
