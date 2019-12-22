@@ -1,0 +1,7 @@
+release: "github"
+github:
+  repo: "HumanizeDuration.ts"
+  user: "nightapes"
+commitFormat: angular
+branch:
+  master: release

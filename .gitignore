@@ -39,3 +39,4 @@ Desktop.ini
 .DS_Store
 
 /dist/
+.version

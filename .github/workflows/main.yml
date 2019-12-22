@@ -24,3 +24,32 @@ jobs:
 
       - name: Build
         run: yarn run build
+
+      - name: Test pack
+        if: github.ref != 'refs/heads/master'
+        run: yarn pack
+
+      - name: Download releaser
+        run: |
+          wget https://github.com/Nightapes/go-semantic-release/releases/download/1.1.1/go-semantic-release 
+          chmod +x ./go-semantic-release
+          yarn version --new-version $(./go-semantic-release next)
+
+      - name: Release npm
+        if: github.ref != 'refs/heads/master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          ./go-semantic-release release
+          yarn publish
+
+      - name: Release github
+        if: github.ref == 'refs/heads/master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          yarn config set registry https://npm.pkg.github.com/
+          npm login --registry=https://npm.pkg.github.com
+          yarn publish
