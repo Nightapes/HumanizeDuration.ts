@@ -48,6 +48,6 @@ jobs:
           # echo "//registry.npmjs.com/:_authToken=$GITHUB_PAT" >>~/.npmrc
           # yarn publish
           # rm ~/.npmrc
-          yarn config set registry https://npm.pkg.github.com/Nightapes
-          echo "//npm.pkg.github.com/:_authToken=$GITHUB_PAT" >>~/.npmrc
+          yarn config set registry https://npm.pkg.github.com/Nightapes/
+          echo "//npm.pkg.github.com/Nightapes/:_authToken=$GITHUB_PAT" >>~/.npmrc
           yarn publish --verbose
