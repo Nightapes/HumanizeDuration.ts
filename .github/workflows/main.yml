@@ -49,5 +49,5 @@ jobs:
           # yarn publish
           rm ~/.npmrc
           yarn config set registry https://npm.pkg.github.com/
-          echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" >>~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=$GITHUB_PAT" >>~/.npmrc
           yarn publish
