@@ -45,9 +45,9 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           ./go-semantic-release release
-          echo "//registry.npmjs.com/:_authToken=$GITHUB_PAT" >>~/.npmrc
-          yarn publish
-          yarn config set registry https://npm.pkg.github.com/
-          # rm ~/.npmrc
-          # echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" >>~/.npmrc
+          # echo "//registry.npmjs.com/:_authToken=$GITHUB_PAT" >>~/.npmrc
           # yarn publish
+          rm ~/.npmrc
+          yarn config set registry https://npm.pkg.github.com/
+          echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" >>~/.npmrc
+          yarn publish
