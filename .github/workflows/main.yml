@@ -30,6 +30,8 @@ jobs:
         run: yarn pack
 
       - name: Download releaser
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           wget https://github.com/Nightapes/go-semantic-release/releases/download/1.1.1/go-semantic-release 
           chmod +x ./go-semantic-release
