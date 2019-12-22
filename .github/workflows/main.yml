@@ -38,7 +38,7 @@ jobs:
           yarn version --new-version $(./go-semantic-release next)
 
       - name: Release npm
-        if: github.ref == 'refs/heads/master'
+        if: github.ref != 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
