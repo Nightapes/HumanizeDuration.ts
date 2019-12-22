@@ -47,7 +47,7 @@ jobs:
           ./go-semantic-release release
           # echo "//registry.npmjs.com/:_authToken=$GITHUB_PAT" >>~/.npmrc
           # yarn publish
-          rm ~/.npmrc
+          # rm ~/.npmrc
           yarn config set registry https://npm.pkg.github.com/
           echo "//npm.pkg.github.com/:_authToken=$GITHUB_PAT" >>~/.npmrc
           yarn publish
