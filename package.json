@@ -1,12 +1,13 @@
 {
   "name": "humanize-duration-ts",
+  "version": "0.0.0",
   "description": "An implementation of Humanize Duration in typescript",
   "scripts": {
     "test": "karma start",
-    "test-watch": "tsc && karma start --no-single-run --auto-watch",
-    "commit": "npm run prepublish && npm test && git-cz",
-    "prepublish": "typings install && tsc && node make.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "lint": "eslint --fix '**/*.ts'",
+    "test:watch": "karma start --no-single-run --auto-watch",
+    "build": "rollup -c",
+    "watch": "rollup -cw"
   },
   "repository": {
     "type": "git",
@@ -21,40 +22,35 @@
   "bugs": {
     "url": "https://github.com/Nightapes/HumanizeDuration.ts/issues"
   },
-  "main": "humanize-duration-ts.ts",
-  "typings": "./humanize-duration-ts.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "homepage": "https://github.com/Nightapes/HumanizeDuration.ts",
   "devDependencies": {
-    "@angular/core": "2.0.0-rc.4",
-    "@angular/platform-browser": "2.0.0-rc.4",
-    "commitizen": "2.8.1",
-    "cz-conventional-changelog": "1.1.6",
-    "es6-promise": "3.0.2",
-    "es6-shim": "0.35.0",
-    "gulp": "3.9.1",
-    "ng2lint": "0.0.10",
-    "tslint-eslint-rules": "1.2.0",
-    "gulp-git": "1.7.1",
-    "jasmine-core": "2.4.1",
-    "karma": "0.13.19",
-    "karma-chrome-launcher": "0.2.2",
-    "karma-firefox-launcher": "0.1.7",
-    "karma-jasmine": "0.3.8",
-    "karma-mocha-reporter": "2.0.3",
-    "karma-typescript-preprocessor": "0.0.21",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.6",
-    "semantic-release": "^4.3.5",
-    "systemjs": "0.19.24",
-    "systemjs-builder": "0.15.13",
-    "tsd": "0.6.5",
-    "typescript": "1.8.9",
-    "typings": "0.6.8",
-    "zone.js": "0.6.12"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
+    "@types/jasmine": "^3.5.0",
+    "@types/karma": "^3.0.4",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "cz-conventional-changelog": "3.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jasmine-core": "3.5.0",
+    "karma": "4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "2.0.1",
+    "karma-mocha-reporter": "2.2.5",
+    "karma-typescript": "^4.1.1",
+    "prettier": "^1.19.1",
+    "puppeteer": "^2.0.0",
+    "rollup": "^1.27.13",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "rxjs": "6.5.3",
+    "tslint-eslint-rules": "5.4.0",
+    "typescript": "^3.7.4",
+    "zone.js": "0.10.2"
   }
 }

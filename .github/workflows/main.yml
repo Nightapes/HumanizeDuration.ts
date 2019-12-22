@@ -1,0 +1,26 @@
+name: Node
+on: [push, pull_request]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+        id: node
+
+      - name: Check out code
+        uses: actions/checkout@v1
+
+      - run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Lint
+        run: npm lint
+
+      - name: Build
+        run: npm run build
