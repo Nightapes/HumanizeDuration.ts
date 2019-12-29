@@ -38,16 +38,16 @@ jobs:
           yarn version --new-version $(./go-semantic-release next)
 
       - name: Release npm
-        if: github.ref != 'refs/heads/master'
+        if: github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           ./go-semantic-release release
-          # echo "//registry.npmjs.com/:_authToken=$GITHUB_PAT" >>~/.npmrc
-          # yarn publish
-          # rm ~/.npmrc
+          echo "//registry.npmjs.com/:_authToken=$GITHUB_PAT" >>~/.npmrc
+          yarn publish
+          rm ~/.npmrc
           yarn config set registry https://npm.pkg.github.com/@Nightapes/
           echo "//npm.pkg.github.com/@Nightapes/:_authToken=$GITHUB_PAT" >>~/.npmrc
           yarn publish --verbose
