@@ -1,14 +1,25 @@
-module.exports = function (config) {
-    config.set({
-        frameworks: ["jasmine", "karma-typescript"],
-        files: [
-            "src/**/*.ts" // *.tsx for React Jsx
-        ],
-        preprocessors: {
-            "src/**/*.ts": "karma-typescript" // *.tsx for React Jsx
-        },
-        reporters: ["progress", "karma-typescript"],
-        browsers: process.env.TRAVIS ? ['ChromeHeadless'] : ['Chrome'],
-        singleRun: true
-    });
+process.env.CHROME_BIN = require("puppeteer").executablePath();
+
+module.exports = function(config) {
+  config.set({
+    frameworks: ["jasmine", "karma-typescript"],
+    files: ["src/**/*.ts"],
+    preprocessors: {
+      "src/**/*.ts": "karma-typescript"
+    },
+    karmaTypescriptConfig: {
+      compilerOptions: {
+        module: "commonjs"
+      }
+    },
+    reporters: ["progress", "karma-typescript"],
+    browsers: ["ChromeWithoutSecurity"],
+    customLaunchers: {
+      ChromeWithoutSecurity: {
+        base: "ChromeHeadless",
+        flags: ["--no-sandbox", "--disable-setuid-sandbox"]
+      }
+    },
+    singleRun: true
+  });
 };

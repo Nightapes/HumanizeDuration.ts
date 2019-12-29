@@ -1,56 +1,49 @@
 {
-    "$schema": "./node_modules/ng-packagr/package.schema.json",
-    "name": "humanize-duration-ts",
-    "description": "An implementation of Humanize Duration in typescript",
-    "scripts": {
-        "test": "karma start",
-        "build": "tslint --project . && ng-packagr -p package.json",
-        "commit": "tslint --project .  && npm test && git-cz",
-        "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Nightapes/HumanizeDuration.ts.git"
-    },
-    "keywords": [
-        "humanize-duration",
-        "typescript"
-    ],
-    "author": "Sebastian Beisch",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Nightapes/HumanizeDuration.ts/issues"
-    },
-    "main": "humanize-duration-ts.ts",
-    "homepage": "https://github.com/Nightapes/HumanizeDuration.ts",
-    "devDependencies": {
-        "@angular/compiler": "^5.2.8",
-        "@angular/compiler-cli": "^5.2.8",
-        "@angular/core": "^5.2.8",
-        "@types/jasmine": "^2.8.6",
-        "@types/node": "^9.4.1",
-        "commitizen": "2.9.6",
-        "cz-conventional-changelog": "2.1.0",
-        "jasmine-core": "3.1.0",
-        "karma": "2.0.0",
-        "karma-chrome-launcher": "2.2.0",
-        "karma-firefox-launcher": "1.1.0",
-        "karma-jasmine": "0.3.8",
-        "karma-typescript": "3.0.12",
-        "ng-packagr": "2.2.0",
-        "semantic-release": "8.2.3",
-        "tslint": "^5.9.1",
-        "tslint-eslint-rules": "^5.1.0",
-        "typescript": "2.7.2"
-    },
-    "config": {
-        "commitizen": {
-            "path": "node_modules/cz-conventional-changelog"
-        }
-    },
-    "ngPackage": {
-        "lib": {
-            "entryFile": "src/public_api.ts"
-        }
-    }
+  "name": "humanize-duration-ts",
+  "version": "2.0.0",
+  "description": "An implementation of Humanize Duration in typescript",
+  "scripts": {
+    "test": "karma start",
+    "lint": "eslint --fix '**/*.ts'",
+    "test:watch": "karma start --no-single-run --auto-watch",
+    "build": "rollup -c",
+    "watch": "rollup -cw"
+  },
+  "repository": "https://github.com/Nightapes/HumanizeDuration.ts",
+  "keywords": [
+    "humanize-duration",
+    "typescript"
+  ],
+  "author": "Sebastian Beisch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nightapes/HumanizeDuration.ts/issues"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/Nightapes/HumanizeDuration.ts",
+  "devDependencies": {
+    "@types/jasmine": "^3.5.0",
+    "@types/karma": "^3.0.4",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jasmine-core": "3.5.0",
+    "karma": "4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "2.0.1",
+    "karma-mocha-reporter": "2.2.5",
+    "karma-typescript": "^4.1.1",
+    "prettier": "^1.19.1",
+    "puppeteer": "^2.0.0",
+    "rollup": "^1.27.13",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "typescript": "^3.7.4"
+  }
 }
