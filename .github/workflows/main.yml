@@ -35,6 +35,8 @@ jobs:
         run: |
           wget https://github.com/Nightapes/go-semantic-release/releases/download/1.1.1/go-semantic-release 
           chmod +x ./go-semantic-release
+          git config user.name "Nightapes"
+          git config user.email svbeisch@gmail.com
           yarn version --new-version $(./go-semantic-release next)
 
       - name: Release npm
