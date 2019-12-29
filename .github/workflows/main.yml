@@ -47,7 +47,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           ./go-semantic-release release
-          echo "//registry.npmjs.com/:_authToken=$NPM_TOKEN" >>~/.npmrc
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >>~/.npmrc
           yarn publish
           rm ~/.npmrc
           yarn config set registry https://npm.pkg.github.com/@Nightapes/
