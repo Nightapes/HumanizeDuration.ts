@@ -1,6 +1,6 @@
 {
   "name": "humanize-duration-ts",
-  "version": "v2.1.0",
+  "version": "2.1.0",
   "description": "An implementation of Humanize Duration in typescript",
   "scripts": {
     "test": "karma start",
@@ -45,5 +45,8 @@
     "rollup": "^1.27.13",
     "rollup-plugin-typescript2": "^0.25.3",
     "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "ngx-validators": "^5.0.0"
   }
 }
