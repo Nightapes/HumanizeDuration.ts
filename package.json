@@ -45,8 +45,5 @@
     "rollup": "^1.27.13",
     "rollup-plugin-typescript2": "^0.25.3",
     "typescript": "^3.7.4"
-  },
-  "dependencies": {
-    "ngx-validators": "^5.0.0"
   }
 }
