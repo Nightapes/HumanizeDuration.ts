@@ -5,7 +5,6 @@ I have the time in milliseconds and I want it to become "30 minutes" or "3 days,
 
 ## Origin
 
-
 This is the typescript version of the javascript libary "HumanizeDuration.js"
 The thank goes to: Evan Hahn  ([Github](https://github.com/EvanHahn/HumanizeDuration.js))
 
